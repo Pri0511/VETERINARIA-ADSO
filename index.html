@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC&family=Playwrite+US+Trad:wght@100..400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>Codificación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="fila1">
+
+
+            <h1>CONTROL</h1>
+
+            <div class="cards1">
+                <h3>Registrar</h3>
+                <!--Modal pricipal-->
+                <button type="button" class="buttonpri" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTRO</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+
+                            <div class="foto">
+                                <img id="animal-image" src="default.jpg" alt="Imagen de animal">
+
+                                <div class="text1">
+                                    <h2>Nombre:</h2>
+                                    <input type="text" id="nombre" placeholder="NOMBRE"><br><br>
+                                </div>
+                                <div class="text3">
+                                    <h2>Tipo:</h2>
+                                    <select name="tipo" id="tipo">
+                                        <option value="seleccione">seleccione</option>
+                                        <option value="Gato">gato</option>
+                                        <option value="Perro">perro</option>
+                                        <option value="Pez">pez</option>
+                                        <option value="Caballo">caballo</option>
+                                        <option value="Conejo">conejo</option>
+                                        <option value="Pato">pato</option>
+                                        <option value="Gallina">gallina</option>
+                                    </select><br><br>
+                                </div>
+                            </div>
+
+                            <div class="formula">
+
+                                <div class="fila2">
+
+                                    <div class="colum2">
+                                        <div class="text">
+                                            <h2>PROPIETARIO:</h2>
+                                            <input type="text" id="propietario"
+                                                placeholder="NOMBRE DEL PROPIETARIO"><br><br>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Fecha:</h2>
+                                            <input type="date" id="fecha"><br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="colum3">
+                                        <div class="text">
+                                            <h2>telefono:</h2>
+                                            <input type="number" id="telefono" placeholder="NUMERO DE TELEFONO"><br><br>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Hora:</h2>
+                                            <input type="time" id="hora" placeholder="HORA"><br><br>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="fila3">
+                                    <h2>Sintomas:</h2>
+                                    <textarea class="enfermo" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" onclick="validar()" >Guardar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fin Modal pricipal-->
+
+
+
+            <div class="cards">
+
+                <!--opcion-->
+                <div class="opciones">
+                    <label>
+                        <input type="radio" name="estado" value="abiertas" onchange="seleccionarEstado(this.value)">
+                        Abiertas
+                    </label>
+                    <label>
+                        <input type="radio" name="estado" value="terminadas" onchange="seleccionarEstado(this.value)">
+                        Terminadas
+                    </label>
+                    <label>
+                        <input type="radio" name="estado" value="anuladas" onchange="seleccionarEstado(this.value)">
+                        Anuladas
+                    </label>
+                </div>
+                <!--fin opcion-->
+                <!--div para R.extendido sisa-->
+                <button type="button" class="buttonExt" data-bs-toggle="modal" data-bs-target="#exampleModalExtendido"
+                    onclick="mostrarAcavanExtendidoModal()">
+                    Registro Extendido
+                </button>
+            </div>
+
+
+
+
+
+            <!-- Modal extendido -->
+            <div class="modal fade" id="exampleModalExtendido" tabindex="-1"
+                aria-labelledby="exampleModalLabelExtendido" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabelExtendido">REGISTRO EXTENDIDO</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="acavan"></div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fin Modal extendido-->
+
+
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+
+</html>
