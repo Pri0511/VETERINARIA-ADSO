@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(11, 11, 11);
+    background: radial-gradient(circle, rgba(11, 11, 11, 1) 0%, rgba(39, 39, 42, 1) 44%, rgba(22, 25, 25, 1) 100%);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    height: 90%;
+    width: 70%;
+    max-width: 70%;
+    background-image: url('perro3.jpg');
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: -190px -180px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.fila1 {
+    position: absolute;
+    top: 2%;
+    left: 61%;
+    height: 95%;
+    width: 37%;
+    background-color: rgba(197, 189, 186, 0.39);
+    border-radius: 25px;
+}
+
+.fila1 h1 {
+    margin-top: 10%;
+    margin-left: 12%;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.buttonpri {
+    margin-top: 6%;
+    margin-left: 4%;
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(206, 200, 198, 0.986);
+    width: 92%;
+    height: 50%;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/8058/8058487.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 25px;
+}
+
+.buttonpri:hover {
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(177, 174, 172, 0.863);
+}
+
+.opciones {
+    display: flex;
+    margin-top: 20px;
+    margin-left: -4%;
+    flex-direction: column;
+}
+
+.opciones label {
+    cursor: pointer;
+    margin-top: 5%;
+    width: 37%;
+    height: 20%;
+    margin-left: 33%;
+    border-radius: 8px;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(224, 213, 209, 0.986);
+
+    font-size: 15px;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.opciones label:hover {
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(206, 198, 192, 0.863);
+}
+
+.cards {
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 92%;
+    height: 45%;
+    max-height: 45%;
+    border-radius: 25px;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(190, 183, 180, 0.582);
+    overflow-y: auto;
+
+}
+
+.cards1 {
+    margin-top: 5%;
+    margin-left: 4%;
+    width: 92%;
+    height: 30%;
+    max-height: 30%;
+    border-radius: 25px;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(190, 183, 180, 0.582);
+    overflow-y: auto;
+
+}
+
+.cards1 h3 {
+    margin-top: 5%;
+    margin-left: 27%;
+    margin-bottom: -0.5%;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#exampleModal div.modal-content {
+    display: grid;
+    grid-template-rows: 0.2fr 5 fr 1fr;
+    top: 3%;
+    left: -45%;
+    width: 190%;
+    background-color: rgba(189, 177, 174, 0.863);
+    border-radius: 25px;
+}
+
+#exampleModal Label {
+    font-size: 20px;
+    margin-left: 43%;
+}
+
+div.modal-header {
+    margin-top: -10%;
+
+}
+
+#exampleModal div.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+
+}
+
+.foto img {
+    margin-top: 6%;
+    margin-left: 5%;
+    width: 90%;
+    height: 40%;
+    max-height: 40%;
+    border-radius: 15px;
+}
+
+
+#exampleModal .modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.formula {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.fila2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.colum2,
+.colum3,
+.text1 {
+    margin-top: 10%;
+}
+
+.text,
+.text1 {
+    font-size: 10px;
+}
+
+
+.text h2 {
+    font-size: 15px;
+    margin-left: 10%;
+}
+
+.text1 h2,
+.text3 h2 {
+    font-size: 15px;
+    margin-left: 5%;
+}
+
+.fila3 h2 {
+    font-size: 15px;
+    margin-left: 5%;
+    margin-top: -5%;
+}
+
+#exampleModal #nombre,
+#exampleModal #tipo,
+#exampleModal #propietario,
+#exampleModal #fecha,
+#exampleModal #telefono,
+#exampleModal #hora {
+    width: 80%;
+    height: 25px;
+
+    border-radius: 15px;
+    margin-left: 10%;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(255, 246, 243, 0.582);
+
+
+    font-size: 12.5px;
+    color: rgb(0, 0, 0);
+
+}
+
+#exampleModal .enfermo {
+    width: 90%;
+    height: 95%;
+
+    border-radius: 10px;
+    margin-left: 5%;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(255, 246, 243, 0.582);
+
+
+    font-size: 12.5px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+.buttonExt {
+    margin-top: 10%;
+    margin-left: 20%;
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(206, 200, 198, 0.986);
+    width: 60%;
+    height: 15%;
+    border-radius: 25px;
+
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.buttonExt:hover {
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(177, 174, 172, 0.863);
+}
+
+
+
+
+
+
+
+
+#exampleModalExtendido div.modal-content {
+    display: grid;
+    grid-template-rows: 0.1fr 6fr 0.3fr;
+    top: 3%;
+    left: -45%;
+    width: 190%;
+
+    background-color: rgba(189, 177, 174, 0.863);
+    border-radius: 25px;
+}
+
+#exampleModalExtendido div.modal-body {
+    padding: 1%;
+    width: 100%;
+    height: 102%;
+    max-height: 102%;
+    overflow-y: auto;
+    margin-top: -1%;
+    
+}
+
+.acavan {
+    display: grid;
+    padding: 0%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(204, 197, 194, 0.582);
+    overflow-y: auto;
+    margin-bottom: 1%;
+}
+
+div.col.mt-3.acavan {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.acavan img {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 40%;
+    max-height: 40%;
+    border-radius: 15px;
+}
+
+.acavan h2 {
+    margin-top: 7%;
+    font-size: 15px;
+    margin-left: 10%;
+
+}
+
+.acavan .nombre-mascota,
+.acavan .tipo-mascota {
+    width: 80%;
+    height: 25px;
+
+    border-radius: 15px;
+    margin-left: 10%;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(255, 246, 243, 0.582);
+}
+
+.acavan .nombre-mascota h3,
+.acavan .tipo-mascota h3 {
+    margin-top: 1%;
+    font-size: 15px;
+    margin-left: 5%;
+    color: rgb(75, 70, 70);
+}
+
+div.col.mt-1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+div.cabeza {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.acavan h4 {
+    margin-top: 7%;
+    font-size: 15px;
+    margin-left: 10%;
+
+}
+
+.acavan .propietario-mascota,
+.acavan .fecha-mascota,
+.acavan .telefono-mascota,
+.acavan .hora-mascota {
+    width: 80%;
+    height: 25px;
+
+    border-radius: 15px;
+    margin-left: 10%;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(255, 246, 243, 0.582);
+}
+
+.acavan .fecha-mascota,
+.acavan .hora-mascota {
+    margin-bottom: -28%;
+}
+
+.acavan .propietario-mascota h3,
+.acavan .fecha-mascota h3,
+.acavan .telefono-mascota h3,
+.acavan .hora-mascota h3 {
+    margin-top: 1%;
+    font-size: 15px;
+    margin-left: 5%;
+    color: rgb(75, 70, 70);
+}
+
+.acavan h5 {
+    margin-top: -2%;
+    font-size: 15px;
+    margin-left: 5%;
+
+}
+
+
+.acavan .cola{
+    display: grid;
+    grid-template-rows: 1fr 0.3fr;
+}
+
+.acavan .sintomas-mascota {
+    width: 90%;
+    height: 125px;
+    max-height: 125px;
+
+    border-radius: 15px;
+    margin-left: 5%;
+    margin-top: 2%;
+
+    border: 1px solid rgba(214, 201, 196, 0.986);
+    background-color: rgba(255, 246, 243, 0.582);
+    overflow-y: auto;
+}
+
+.acavan .cola h6 {
+    margin-top: -3%;
+    font-size: 15px;
+    margin-left: 5%;
+
+}
+
+.acavan .sintomas-mascota h3 {
+    margin-top: 1%;
+    font-size: 15px;
+    margin-left: 2%;
+    color: rgb(75, 70, 70);
+}
+
+
+.cola2 {
+   margin-top: 1%;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-custom-1 {
+    width: 15%;
+    height: 80%;
+    margin-left: 46%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px; 
+    background-color:  rgba(87, 196, 57, 0.986);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-custom-2 {
+    width: 15%;
+    height: 80%;
+    margin-left: 1%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(57, 116, 204, 0.582); 
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-custom-4 {
+    width: 15%;
+    height: 80%;
+    margin-left: 1%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(204, 182, 57, 0.582); 
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-3 {
+    width: 15%;
+    height: 80%;
+    margin-left: 1%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(197, 68, 59, 0.582); 
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+h1#exampleModalLabel.modal-title.fs-5{
+    margin-left: 40%;
+}
+
+h1#exampleModalLabelExtendido.modal-title.fs-5{
+    margin-left: 33%;
+}
